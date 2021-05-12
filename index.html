@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Don't read the title</title>
+        <style>
+            *{
+                font-family: sans-serif;
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+            button{
+                padding: 20px;
+                color: black;
+                border: 3px solid black;
+                transition: 0.25s;
+                font-size: 1rem;
+                border-radius: 10px;
+                text-transform: uppercase;
+            }
+            button:hover{
+                color: white;
+                background-color: black;
+            }
+            a{
+                font-size: 2rem;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="show()">Don't click this</button>
+        <a href="https://www.youtube.com/watch?v=-pHhb4biR9k" class="link">Don't click this link</a>
+        <script type="text/javascript">
+            function show(){
+                
+                document.querySelector(".link").style.display = "block";
+                document.querySelector("button").style.display = "none";
+            }
+        </script>
+    </body>
+
+</html>
